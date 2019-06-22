@@ -2,18 +2,26 @@
 
 ## Installation
 
-> git clone https://github.com/hscstudio/yii2-simple-news-app.git
-> composer install
+```
+git clone https://github.com/hscstudio/yii2-simple-news-app.git
+composer install
+```
 
 ## Running
 
-> cd yii2-simple-news-app
-> yii serve --port=999
+```
+cd yii2-simple-news-app
+yii serve --port=999
+```
 
 ## Switch To PWA
 
-> git checkout pwa 
+```
+git checkout pwa 
+```
 
 ## Switch To PWA SPA
 
-> git checkout pwa-spa
+```
+git checkout pwa-spa
+```
