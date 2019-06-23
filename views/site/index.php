@@ -2,7 +2,11 @@
 use yii\bootstrap4\Html;
 /* @var $this yii\web\View */
 
-$this->title = 'News App';
+$this->title = 'Simple News App: List of News';
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Simple News App: List of News'
+]);
 ?>
 <div class="site-index">
 
@@ -13,7 +17,7 @@ $this->title = 'News App';
         echo "<h5>".Html::a($news['title'],['detail', 'guid'=>$news['guid']])."</h5>";
         echo "<p>";
         echo "<small>".$news['author']." at ".date('d-M-Y', strtotime($news['pubDate']))."</small><br>";
-        echo Html::img($news['thumbnail'], ['class'=>'rounded img-fluid']);
+        echo Html::img(null, ['data-src'=>$news['thumbnail'],'class'=>'lazyload rounded img-fluid']);
         echo substr(strip_tags($news['description']),0,255)."...<br>";
         echo "<small>".implode(', ', $news['categories'])."</small>";
         echo "</p>";

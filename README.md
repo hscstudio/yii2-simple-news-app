@@ -28,6 +28,9 @@ git checkout master
 git checkout pwa 
 ```
 
+- add web manifest 
+- 
+
 ## Switch To PWA SPA
 
 ```

@@ -115,5 +115,6 @@ a.desc:after {
 }
 
 a {
+    color: #1a73e8;
     cursor: pointer;
 }
