@@ -15,9 +15,6 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'K2gqTAIOTq9r6fB7tkjv4pcZTY_Vjp2l',
-            'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
-            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -52,97 +49,6 @@ $config = [
             'rules' => [
             ],
         ],
-        'response' => [
-            // ...
-            'formatters' => [
-                \yii\web\Response::FORMAT_JSON => [
-                    'class' => 'yii\web\JsonResponseFormatter',
-                    'prettyPrint' => YII_DEBUG, // use "pretty" output in debug mode
-                    'encodeOptions' => JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
-                    // ...
-                ],
-            ],
-        ],
-        'assetManager' => [
-            'class' => 'yii\web\AssetManager',
-            'bundles' => [
-                'yii\web\JqueryAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'jquery.js' : 'jquery.min.js'
-                    ],
-                ],        
-                'yii\bootstrap4\BootstrapAsset' => [
-                    'css' => [
-                        YII_ENV_DEV ? 'css/bootstrap.css' : 'css/bootstrap.min.css',
-                    ],
-                    'cssOptions' => [
-                        'rel' => 'preload',
-                        'as' => 'style',
-                    ]
-                ],
-                'yii\bootstrap4\BootstrapPluginAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'js/bootstrap.js' : 'js/bootstrap.min.js',
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                ],
-                'yii\web\YiiAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'yii.js' : '/js/yii.min.js'
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                 
-                ],
-                'yii\widgets\ActiveFormAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'yii.activeForm.js' : '/js/yii.activeForm.min.js'
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                 
-                ],
-                'yii\grid\GridViewAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'yii.gridView.js' : '/js/yii.gridView.min.js'
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                 
-                ],
-                'yii\validators\ValidationAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'yii.validation.js' : '/js/yii.validation.min.js'
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                 
-                ],
-                'yii\captcha\CaptchaAsset' => [
-                    'js' => [
-                        YII_ENV_DEV ? 'yii.captcha.js' : '/js/yii.captcha.min.js'
-                    ],
-                    'jsOptions' => [
-                        'defer' => 'defer',
-                    ],
-                ],
-                'app\assets\AppAsset' => [
-                    'jsOptions' => [
-                        //'defer' => 'defer',
-                    ],
-                    'cssOptions' => [
-                        'rel' => 'preload',
-                        'as' => 'style',
-                    ]
-                ]
-            ],
-        ],   
     ],
     'params' => $params,
 ];

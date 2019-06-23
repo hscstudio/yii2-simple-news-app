@@ -113,8 +113,3 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
-
-a {
-    color: #1a73e8;
-    cursor: pointer;
-}
